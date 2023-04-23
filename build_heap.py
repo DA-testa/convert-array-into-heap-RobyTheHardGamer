@@ -29,7 +29,7 @@ def build_heap(arr):
 def main():
 
 
-    input1 = input("Input I or F: ")
+    input1 = input()
     if (input1 == "F"):
         lines = []
         input2 = input()
@@ -47,7 +47,7 @@ def main():
             print(swap[0], swap[1])
 
     elif (input1 == "I"): #ja I
-        print("Input:")
+
 
         n = int(input()) #nolasīta pirmā rinda
         arr = list(map(int, input().split())) #nolasīta otrā rinda
@@ -58,7 +58,7 @@ def main():
         for swap in swaps:
             print(swap[0], swap[1])
     else:
-        print("Incorrect input (must be I or F)") #ja nav ievadīts ne F ne I, nepieņem ievadīto
+        print() #ja nav ievadīts ne F ne I, nepieņem ievadīto
         
 
 ##n = int(input()) ##Ievadīt par 'cik'?
