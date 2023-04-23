@@ -28,35 +28,15 @@ def build_heap(arr):
 
 def main():
 
+    n = int(input()) #nolasīta pirmā rinda
+    arr = list(map(int, input().split())) #nolasīta otrā rinda
 
-    input1 = input("Input I or F: ")
-    if (input1 == "F"):
-        inputF = input("File name: ") 
-        inputFile = open(inputF, "r") #atver failu nolasīšanai
-        lines = inputFile.readlines() #difinēts līnijas lasītājs
+    swaps = build_heap(arr)
 
-        n = int(lines[0]) #nolasīta pirmā rinda
-        arr = list(map(int, lines[1].split())) #nolasīta otrā rinda
+    print(len(swaps))
+    for swap in swaps:
+        print(swap[0], swap[1])
 
-        swaps = build_heap(arr)
-
-        print(len(swaps))
-        for swap in swaps:
-            print(swap[0], swap[1])
-
-    elif (input1 == "I"): #ja I
-        print("Input:")
-
-        n = int(input()) #nolasīta pirmā rinda
-        arr = list(map(int, input().split())) #nolasīta otrā rinda
-
-        swaps = build_heap(arr)
-
-        print(len(swaps))
-        for swap in swaps:
-            print(swap[0], swap[1])
-    else:
-        print("Incorrect input (must be I or F)") #ja nav ievadīts ne F ne I, nepieņem ievadīto
         
 
 ##n = int(input()) ##Ievadīt par 'cik'?
