@@ -29,7 +29,8 @@ def build_heap(arr):
 def main():
 
 
-
+    input1 = input()
+    if (input1 == "F"):
         inputF = input() 
         inputFile = open(inputF, "r") #atver failu nolasīšanai
         lines = inputFile.readlines() #difinēts līnijas lasītājs
@@ -42,7 +43,20 @@ def main():
         print(len(swaps))
         for swap in swaps:
             print(swap[0], swap[1])
-  
+
+    elif (input1 == "I"): #ja I
+
+        n = int(input()) #nolasīta pirmā rinda
+        arr = list(map(int, input().split())) #nolasīta otrā rinda
+
+        swaps = build_heap(arr)
+
+        print(len(swaps))
+        for swap in swaps:
+            print(swap[0], swap[1])
+    else:
+        print() #ja nav ievadīts ne F ne I, nepieņem ievadīto
+        
 
 ##n = int(input()) ##Ievadīt par 'cik'?
 ##arr = list(map(int, input().split())) ##Ievadīt skaitļus, pēc 'cik'?
