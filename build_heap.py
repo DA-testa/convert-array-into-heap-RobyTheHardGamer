@@ -45,7 +45,6 @@ def main():
             print(swap[0], swap[1])
 
     elif (input1 == "I"): #ja I
-        print()
 
         n = int(input()) #nolasīta pirmā rinda
         arr = list(map(int, input().split())) #nolasīta otrā rinda
